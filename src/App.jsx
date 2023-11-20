@@ -1,9 +1,20 @@
+
+import './scss/main.scss';
+import Header from './jsx/components/header'; // Import the Header component
+import Intro from './jsx/components/intro'; // Import the Header component
+
 function App() {
     return (
-        <div>
-            <h1>hrj</h1>
-        </div>
+        <>
+            <section className="intro">
+                {/* Include the Header component */}
+                <Header />
+                {/* Include the Intro component */}
+                <Intro />
+            </section>
+        </>
     );
 }
 
 export default App;
+
