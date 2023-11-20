@@ -5,16 +5,15 @@ function Intro() {
             <div className="hero">
                 <div className="hero__bg">
                     <div className="hero__inner">
-                        <h1 className="hero__hdl">CAR SHARING</h1>
+                        <h4 className="hero__hdl"><span className="hero__span">HOL-TAXI </span><br/> POMOC DROGOWA</h4>
                         <p className="hero__lead">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat.
+                            Kompleksowa pomoc drogowa na terenie
+                            Warszawy, okolic jak i na obszarze całego kraju.
+                            Jesteśmy do twojej dyspozycji
+                            24 godziny na dobę, 7 dni w tygodniu.
                         </p>
                         <div className="hero__row">
-                            <a className="hero__btn btn btn-large">SHARE A CAR</a>
-                            <a className="hero__btn btn btn-large btn-secondary">KEY FEATURES</a>
+                            <a className="hero__btn btn btn-large">ZADZWOŃ 000-000-000</a>
                         </div>
                     </div>
                 </div>
