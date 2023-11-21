@@ -1,16 +1,15 @@
 function Price() {
     return (
         <>
-            <div className='main-div'>
-                <div className='main-div__left-box'>
-                    <h2 className='left-box__title'>UZYSKAJ WYCENĘ</h2>
-                    <h2 className='left-box__subtitle'>SKORZYSTAJ Z KALKULATORA CEN!</h2>
-                    <p className='left-box__description'>
-                        Wprowadź miejsce rozpoczęcia podróży, cel, a następnie podaj rodzaj pojazdu.
-                    </p>
-                </div>
-                <div className="main-div__price-row">
-                    <a className="price-row__btn btn btn-large">Przelicz koszty transportu</a>
+
+            <div className="price__main">
+                <div className="price__inner">
+                    <div className="price__left">
+                        <h2 className="price__lefte hdl">UZYSKAJ WYCENĘ</h2>
+                        <h4 className="price__left title">SKORZYSTAJ Z KALKULATORA CEN!</h4>
+                        <p className="price__left lead">Wprowadź miejsce rozpoczęcia podróży, cel, a&nbsp;następnie podaj rodzaj pojazdu.</p>
+                        <div className="price__row"><a className="price__btn btn btn-large">Przelicz koszty transportu</a></div>
+                    </div>
                 </div>
             </div>
 
