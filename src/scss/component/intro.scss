@@ -56,7 +56,7 @@
 .header .header__inner {
   max-width: 70.5rem;
   width: 100%;
-  padding-inline: 1.25rem;
+  //padding-inline: 1.25rem;
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
@@ -66,13 +66,13 @@
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-decoration: none;
 }
 
 .logo .logo__img {
-  width: 1.9375rem;
-  height: 2.1875rem;
+  width: 12rem;
+  height: 3rem;
   margin-right: .625rem;
 }
 
@@ -114,8 +114,8 @@
 }
 
 .logo__img {
-  background: url('../assets/logo.svg') no-repeat center;
-  padding: 20px;
+  background: url('../assets/HolTaxi112_1.svg') no-repeat left;
+  padding: 40px;
 }
 
 .hero {
@@ -163,6 +163,10 @@
   text-align: center;
   line-height: 1;
 
+}
+
+.yellow {
+  color: var(--secondary-color_);
 }
 
 .hero .hero__lead {

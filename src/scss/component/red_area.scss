@@ -1,0 +1,56 @@
+
+.red__area {
+  background-color: var(--red);
+
+  .red__inner {
+    max-width: 70.5rem;
+    //width: 100%;
+    padding-inline: 1.25rem;
+    margin-inline: auto;
+    padding: 4rem 0;
+
+    //display: flex;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--secondary-color);
+
+    display: table; /* Ustawienie na 'table' */
+    width: 100%;
+
+
+    .red__left,
+    .red__right {
+      display: table-cell; /* Ustawienie na 'table-cell' */
+      text-align: left;
+      vertical-align: middle; /* Wyśrodkowanie wertykalne */
+
+      max-width: 35.25rem;
+    }
+
+    .red__right {
+      text-align: right; /* Opcjonalne: jeśli chcesz zawartość w red__right wyrównać do prawej strony */
+      width: 60%;
+    }
+
+    .red__right .number {
+      font-size: 5rem;
+      font-weight: 900;
+
+      animation: shake 900ms both ease-in-out 200ms 2 normal running;
+    }
+
+    @keyframes shake {
+    10%, 90% {transform: translate(-1px, 0);}
+    20%, 80% {transform: translate(2px, 0);}
+    30%, 50%, 70% {transform: translate(-4px, 0);}
+    40%, 60% { transform: translate(4px, 0);}
+    }
+
+
+    .red__left .title {
+      font-size: 2rem;
+      font-weight: 900;
+
+    }
+  }
+}

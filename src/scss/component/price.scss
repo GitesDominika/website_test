@@ -13,25 +13,19 @@
 
     font-family: 'Roboto Condensed', sans-serif;
 
-    .price__left {
-      justify-content: flex-start;
-      text-align: left;
-
-    }
+    .price__left {text-align: left;}
 
     .price__left .hdl {
       font-size: 4rem;
       font-weight: 900;
-
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
 
     }
 
     .price__left .title {
       font-size: 2rem;
       font-weight: 900;
-
-      margin-bottom: 1rem;
+      margin-bottom: .250rem;
 
     }
 
@@ -40,10 +34,41 @@
       font-size: 1.125rem;
       font-weight: 400;
       margin-bottom: 3rem;
+    }
+
+    .price__row {
+      height: 1rem;
+      margin-bottom: 1rem;
+
+      .button-1 {
+        cursor: pointer;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 600;
+        width:100%;
+        height: 1rem;
+        //margin-top: 1rem;
+        padding:.850rem 3rem;
+        font-size: 1rem;
+
+        background-color: black;
+        color:#fff;
+        text-transform: uppercase;
+        border:1px solid black;
+      }
+
+      .button-1:hover,
+      .button-1:focus {
+        width:100%;
+        padding:.850rem 3rem;
+        font-size: 1rem;
+        background-color: var(--secondary-color_);
+        color: black;
+        text-transform: uppercase;
+        border:1px solid black;
+      }
 
     }
 
-    .price__row .lead {}
-
   }
 }
+

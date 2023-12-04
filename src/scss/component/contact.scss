@@ -1,0 +1,135 @@
+
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} /* zmien wartosci*/
+
+
+.container-1 .inner-1 {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 1rem rgba( 0, 0, 0, 0.3);
+  animation: mymove 500ms ease-in
+}
+
+.title-1 {
+  font-size: 2rem;
+  color: black;
+  line-height: 1.3;
+  font-weight: 800;
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.paragraph-1 {
+  color: black;
+  width: 80%;
+  margin: 0 0 1rem 0;
+  max-width: 28rem;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.big-1 {
+  margin: 0 0 2rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: black;
+  line-height: 1.1;
+  width: 80%;
+  margin-inline: auto;
+  text-align: center;
+}
+.container-1 .inner-1 .form-inner-1 .input-gr  {}
+
+.container-1 .inner-1 .form-inner-1 .input-gr label {}
+
+.container-1 .inner-1 .form-inner-1 .input-gr input {
+  margin: 0;
+  padding: .750rem .750rem .750rem .750rem;
+  width: 100%;
+}
+
+.container-1 .form-inner-1 .control-error {
+  color: red;
+  font-size: 1rem;
+  padding: .5rem 0 .750rem 0;
+}
+
+.container-1 .form-inner-1 .control-error p {
+  margin: 0;
+}
+
+.button {
+  cursor: pointer;
+  width:100%;
+  margin-top: 1rem;
+  padding:.850rem;
+  font-size: 1rem;
+  background-color: black;
+  color:#fff;
+  text-transform: uppercase;
+  border:1px solid black;
+  border-radius: .250rem;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  width:100%;
+  margin-top: 1rem;
+  padding:.850rem;
+  font-size: 1rem;
+  background-color: darkorange;
+  color: black;
+  text-transform: uppercase;
+  border:1px solid black;
+  border-radius: .250rem;}
+
+.button-flat {
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+  background-color: transparent;
+  border: 0;
+  color: black;
+}
+
+.button-flat:hover,
+.button-flat:focus {
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+  background-color: transparent;
+  border: 0;
+  color: red;
+}
+
+.container-1 .inner-1 .form-inner-1 .input-gr .basket {
+  width: 100%;
+  display: flex;
+  align-items: center;}
+
+.container-1 .inner-1 .form-inner-1 .input-gr .check {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0;
+  margin-top: .250rem;
+  align-self: flex-start;
+}
+
+.container-1 .inner-1 .form-inner-1 .input-gr .txt {
+  color: black;
+  width: calc(100% - 3rem); /* Adjusted width to accommodate .check on the right */
+  line-height: 1.1;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}

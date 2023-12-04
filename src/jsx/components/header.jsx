@@ -6,8 +6,6 @@ function Header() {
                 <div className="header__inner">
                     <a href="/" className="logo">
                         <span className="logo__img" />
-                        <span className="logo__text">HOL</span>
-                        <span className="logo__text logo__text--highlight">Taxi</span>
                     </a>
                     <nav className="menu">
                         <a href="" className="menu__item menu__item--active">
@@ -23,7 +21,7 @@ function Header() {
                             KONTAKT
                         </a>
                     </nav>
-                    <a className="hero__btn btn btn-large btn-secondary">ZADZWOŃ 000-000-000</a>
+                    <a className="hero__btn btn btn-large btn-secondary" href="tel:+48661173557">ZADZWOŃ 000-000-000</a>
                 </div>
             </header>
 

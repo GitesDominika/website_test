@@ -1,0 +1,48 @@
+.footer__main{
+  background-color: var(--secondary-color_);
+
+  .footer__inner {
+    max-width: 70.5rem;
+    width: 100%;
+    padding-inline: 1.25rem;
+    margin-inline: auto;
+    padding: 2rem 0;
+    border-top: .125rem solid black;
+
+    display: flex;
+    gap: 8rem;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+
+    .footer__left,
+    .footer__right {
+      text-align: left;
+      vertical-align: middle; /* Wyśrodkowanie wertykalne */
+      width:33.33%;
+      > * {display: inline;}
+
+
+
+      .footer__left__hdl { }
+      .footer__left__title { }
+
+      .footer__right__mail a {text-decoration: none; color: black; }
+      .footer__right__tel a {text-decoration: none; color: black; }
+    }
+    .footer__left {
+      width:66.66%;
+    }
+    .footer__right {
+      font-weight: 500;
+      width:33.33%;
+    }
+
+  }
+
+
+
+
+
+}
+
