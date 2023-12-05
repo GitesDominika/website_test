@@ -7,7 +7,7 @@ import Form from './jsx/components/form'; // Import the Header component
 import Red_area from './jsx/components/Red_area';
 import Info_box from "./jsx/components/info_box.jsx";
 import Footer from "./jsx/components/footer.jsx"; // Import the Header component
-import GoogleMapApi from "./jsx/components/googleMapApi.jsx"; // Import the Header component
+import Calculator  from "./jsx/components/calc.jsx"; // Import the Header component
 
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
                 <Price />
             </section>
             <section>
-                {/* Include the Intro component */}
-                <GoogleMapApi />
+                {/* Inne elementy interfejsu użytkownika */}
+                <Calculator />
             </section>
             <section>
                 {/* Include the Intro component */}
