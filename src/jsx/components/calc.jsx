@@ -12,6 +12,7 @@ import { FaLocationArrow, FaTimes } from 'react-icons/fa';
 import { useJsApiLoader, GoogleMap, Marker, Autocomplete, DirectionsRenderer,} from '@react-google-maps/api';
 import { useRef, useState } from 'react'
 
+
 const distanceTextStyle = {
     margin: '0 20px',
     backgroundColor: '#EED433',
@@ -39,17 +40,13 @@ const priceTextStyle = {
 
 const center = { lat: 52.2297, lng: 21.0122 };
 
+
 function Calculator() {
 
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries: ['places'],
     })
-
-    const [map, setMap] = useState(/** @type google.maps.Map */ (null))
-    const [directionsResponse, setDirectionsResponse] = useState(null)
-    const [distance, setDistance] = useState('')
-    const [duration, setDuration] = useState('')
 
     const mapOptions = {
         styles: [
@@ -126,6 +123,12 @@ function Calculator() {
         fullscreenControl: false,
     };
 
+    const [map, setMap] = useState(/** @type google.maps.Map */ (null))
+    const [directionsResponse, setDirectionsResponse] = useState(null)
+    const [distance, setDistance] = useState('')
+    const [duration, setDuration] = useState('')
+    const [calculatedPrice, setCalculatedPrice] = useState(null);
+
     /** @type React.MutableRefObject<HTMLInputElement> */
     const originRef = useRef()
     /** @type React.MutableRefObject<HTMLInputElement> */
@@ -139,6 +142,14 @@ function Calculator() {
         if (originRef.current.value === '' || destianationRef.current.value === '') {
             return
         }
+        console.log(distance)
+
+        const distanceValue = parseFloat(distance);
+        const cenaZaKilometr = 2.54;
+        const obliczonaCena = distanceValue * cenaZaKilometr;
+
+        // Ustaw obliczoną cenę w stanie
+        setCalculatedPrice(obliczonaCena);
 
         // eslint-disable-next-line no-undef
         const directionsService = new google.maps.DirectionsService();
@@ -190,6 +201,7 @@ function Calculator() {
                 <HStack spacing={6}>
                     <Autocomplete><Input type='text' placeholder='POCZĄTEK' ref={originRef} /></Autocomplete>
                     <Autocomplete><Input type='text' placeholder='KONIEC' ref={destianationRef} /></Autocomplete>
+
                     <ButtonGroup>
                         <Button marginRight={24} colorScheme='red' type='submit' onClick={calculateRoute}>OBLICZ</Button>
                         <IconButton aria-label='center back' icon={<FaLocationArrow />} isRound onClick={() => {map.panTo(center)}}/>
@@ -201,13 +213,11 @@ function Calculator() {
                 <Flex spacing={0} mt={2} justifyContent='center' >
                     <Text style={distanceTextStyle}>ODLEGŁOŚĆ:&nbsp;{distance} </Text>
                     <Text style={distanceTextStyle}>SZACOWANY CZAS:&nbsp;{duration} </Text>
-                    <Text style={priceTextStyle}>PRZYBLIŻONY KOSZT:&nbsp;{duration} </Text>
+                    <Text style={priceTextStyle}>PRZYBLIŻONY KOSZT:&nbsp;{calculatedPrice !== null && !isNaN(calculatedPrice) ? `${calculatedPrice.toFixed(2)} zł` : ''}</Text>
                 </Flex>
                 <Text mt='6' textAlign='center'>Prezentowane koszty są szacunkowe, zależne od ostatecznego czasu trwania podróży i wybranej trasy. </Text>
             </Box>
         </Flex>
-
-
     )
 }
 
